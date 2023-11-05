@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "CanisterConnect_backend": {
+      "main": "src/CanisterConnect_backend/main.mo",
+      "type": "motoko"
+    },
+    "CanisterConnect_frontend": {
+      "dependencies": [
+        "CanisterConnect_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/CanisterConnect_frontend/src/index.html"
+      },
+      "source": [
+        "src/CanisterConnect_frontend/assets",
+        "dist/CanisterConnect_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
